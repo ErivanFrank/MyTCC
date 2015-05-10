@@ -1,0 +1,693 @@
+/* HTML5 ✰ Boilerplate */
+
+html, body, /*div*/ /*span*/, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+/*table*/,  caption, /*tbody*/, /*tfoot*/, thead, 
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  /* border: 0; */
+  font-size: 100%;
+  /*font: italic;*/
+  vertical-align: baseline;
+  
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+/* --- Fontes --- */
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/League_Gothic-webfont.eot');
+    src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('../fonts/Calluna-Regular-webfont.eot');
+    src: url('../fonts/Calluna-Regular-webfont.eot?iefix') format('eot'),
+         url('../fonts/Calluna-Regular-webfont.woff') format('woff'),
+         url('../fonts/Calluna-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Calluna-Regular-webfont.svg#webfontJYolXlF6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, select, input, textarea { color: #444; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; font-family: "LeagueGothicRegular";	text-transform:uppercase;}
+
+a { color: #F14A29; text-decoration: none; }
+a:hover { color: text-decoration: underline; }
+
+body {
+
+	background-image: url(../img/football2013.png); /* Aqui vai a mesma imagem que usamos acima */
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	background-attachment: fixed;
+
+}
+
+p {
+	margin: 20px 15px;
+	font-size: 18px;
+}
+
+/* --- Tipografia --- */
+
+h1 {
+
+	font-size:30px;
+}
+
+h3 {
+
+	color: #000000;
+	font-size: 20px;
+	padding:  10px; 
+}
+
+h4{
+	
+	text-align:center;
+	color: #F14A29;
+	font-size: 15px;
+	padding: 5px 5px 0px;
+}
+
+#tabela{
+
+border:50px;
+border-color:000000;
+
+}
+
+/* --- Estrutura --- */
+
+section, article, aside{
+	display:block;
+	margin:10px 0 0;
+	background: #eee;	
+}
+
+
+#wrapper {
+
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+	width: 1100px;
+	height: 1450px;
+}
+
+/* --- Header --- */
+
+header {
+
+	/*background-color:#3c42f0;
+	background-image: -moz-radial-gradient(center center, circle closest-side, #3c42f0, #030312 41em);
+	background-image: -webkit-radial-gradient(center center, circle closest-side, #3c42f0, #030312 41em);
+	background-image: -o-radial-gradient(center center, circle closest-side, #3c42f0, #030312 41em);
+	background-image: -ms-radial-gradient(center center, circle closest-side, #3c42f0, #030312 41em);
+	background-image: radial-gradient(center center, circle closest-side, #3c42f0, #030312 41em);*/
+	
+	
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+	background-color:#0092BF;
+	clear:both;
+	width:1100px;
+	height: 70px;
+	padding: 30px 0;
+}
+
+header h1 {
+
+	color:#FFFFFF;
+	font-size: 80px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin: 0 30px;
+}
+
+header a {
+	color: #fff;
+	font-size: 18px;
+	float: right;
+	text-decoration: none;
+	margin: -28px 10px 10px;
+}
+
+header a:hover {
+
+	text-decoration: underline;
+	color: #fff;
+}
+
+.nomeJogador{
+
+margin: 0;
+  padding: 5px;
+  /* border: 0; */
+  font-size: 100%;
+  font: arial;
+  /*vertical-align: baseline;*/
+}
+
+
+/* --- Caixa Esquerda #1 --- */
+
+#demo {
+	
+	float:left;
+	margin:0 10px 10px 0;
+	width:1100px;
+	height:800px;
+	background: none;
+}
+
+#introductionRight {
+	
+	
+	width:545px; /* Largura fixa para a div */
+	min-height:670px; /* Altura mínima */
+	height:auto !important; /* Altura ajustável de acordo com o conteúdo */
+	height:670px; /* Altura mínima para IE */
+	background-image: url(../img/campo.jpg); /* Aqui vai a mesma imagem que usamos acima */
+	background-size:100% 100%; /* Imagem ocupando toda largura e altura da div */
+	-webkit-background-size: 100%;	
+	-khtml-background-size: 100%;
+	-moz-background-size: 100% 100%;
+	position:absolute;	
+	margin-top: 30px;
+	
+}
+
+
+
+#introductionLeft {
+	
+	
+	width:545px; /* Largura fixa para a div */
+	min-height:670px; /* Altura mínima */
+	height:auto !important; /* Altura ajustável de acordo com o conteúdo */
+	height:670px; /* Altura mínima para IE */
+	background-image: url(../img/campo.jpg); /* Aqui vai a mesma imagem que usamos acima */
+	background-size:100% 100%; /* Imagem ocupando toda largura e altura da div */
+	-webkit-background-size: 100%;	
+	-khtml-background-size: 100%;
+	-moz-background-size: 100% 100%;
+	position:absolute;	
+	margin-left: 555px;
+	margin-top: 30px;
+}
+
+
+
+#taticaTimeRiht{
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+	background-color:#0092BF;
+	height:40px;
+	width: 545px;	
+	background: #CCCCCC;				   
+}
+
+#taticaTimeLeft{
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+	background-color:#0092BF;
+	height:45px;
+	width: 545px;	
+	background: #CCCCCC;                   
+	margin-left: 555px;	  
+	margin-top: -40px;	  
+				   
+}
+
+
+#introductionTop{
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+	background-color:#0092BF;
+	height:65px;	
+	background: #CCCCCC;               /*  Cor de fundo caixa  */      
+	margin: 10px 0 10px 0;             /*  Margin da caixa     */
+	padding: 0px 0 0;
+	text-align: center; 			   /* Centraliza o texto */
+				   
+}
+
+#introductionTop p {
+	
+	margin: 10px 10px 10px;
+	
+}
+
+
+#divInternaTime1{
+
+	margin: 10px 10px 10px 10px;
+}
+
+#divInternaTime2{
+
+	margin: 10px 10px 10px 10px;		
+}
+
+
+#divScroll{
+	background-color:#FFFFFF00;
+	width:545px;
+	height:500px;
+	overflow:scroll;
+	margin-left: 555px;	
+	margin-top: -550px;*/
+}
+
+#relatos{
+	background-color:#FFFFFF00;
+	width:400px;
+	height:600px;
+	/*overflow:scroll;*/
+	margin-top: 250px;
+	margin-right: 150px;
+	margin-left: 55px;
+}
+
+#three {
+	height:320px;
+	background: #000000;			   /* cor de fundo caixa inferior */
+	margin: 0;
+}
+
+/* --- Conteúdo - Caixa Esquerda #1 --- */
+
+#lista {
+
+	margin: 0;
+}
+
+#lista li {
+	
+	-moz-border-radius: 6px;
+	background-color:#FFFFFF;
+	border: 2px solid #EEEEEE;
+	list-style: none;
+	margin: 20px;
+	padding: 6px 9px;
+	cursor: text;
+	text-shadow: 1px 1px 0 white;
+	font-size: 16px;
+	
+}
+
+#lista:focus {
+    outline: none;
+}
+
+/* --- Caixa Direita #1 --- */
+
+
+/* --- Caixa Esquerda #2 --- */
+
+#categoria {
+	width: 545px;
+	height: 244px;
+	background: url(../img/categorias/3d-graphics-effects.png);
+	margin:0 10px 10px 0;
+	float: left;
+}
+
+/* --- Caixa Direita #2 --- */
+
+#descricao {
+	float:left;
+	margin:0 10px 10px 0;
+	width:1100px;
+	height:800px;
+	background: url(../img/campoTop.png);
+	background-size:100% 100%; 
+
+}
+
+#descricao p {
+	font-size: 18px;
+}
+
+#Lance-Lance{
+	width: 545px;
+	height: 100px;
+	/*margin:	0px 0px 0px 10px;*/
+	/*float: left;*/
+	margin-left: 500px;	
+	margin-top: -300;
+}
+
+
+#infra {
+	
+	margin-left: 20px;
+	width:1000px; /* Largura fixa para a div */		
+	height:700px; /* Altura mínima para IE */
+	background-image: url(../img/campoArea.png); /* Aqui vai a mesma imagem que usamos acima */
+	background-size:100% 100%; /* Imagem ocupando toda largura e altura da div */
+	-webkit-background-size: 100%;	
+	-khtml-background-size: 100%;
+	-moz-background-size: 100% 100%;	
+
+}
+
+
+#controlDropDown{
+
+	width: 350px;
+	height: 15px;
+
+
+}
+
+/* --- Outros --- */
+
+.separador {
+	
+	clear:both;
+	height:200px;
+	margin:0 0 10px;
+	width:1100px;
+	background: transparent;
+}
+
+#html5-badge {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+
+button {
+	margin: 0 0 15px 15px;
+}
+
+/* --- Footer --- */
+
+footer {
+	
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+	background: #0092BF;
+	clear: both;
+	width: 1100px;
+	position: relative;
+	height: 100px;
+	margin-bottom: 40px;
+}
+
+/* --- Conteúdo - Footer --- */
+
+
+footer a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.autor {
+	margin:15px;
+	padding-top: 20px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.referencia {
+	font-size: 16px;
+	color: #fff;
+	margin: 0px 15px 15px;
+}
+
+
+.texto{
+
+    font-weight:bold;
+    font-style:italic;
+    text-align: center;	
+    font-size: 20px;
+    /*background: #FFC0CB;*/
+    margin-left: 10px;
+}
+
+.estatistica{
+
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 14px;
+    margin-left: 170px;
+}
+
+
+.timesA{
+
+	-moz-border-radius: 10px;
+    border-radius: 20px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 14px;
+	height:25px;
+	width: 200px;	
+	margin-left: 50px;
+	margin-top: 30px; 
+	background: #FFC0CB;
+	text-align: center;
+	position: relative;
+}
+
+.timesB{
+
+	-moz-border-radius: 10px;
+    border-radius: 20px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 14px;
+    margin-top: 30px;
+	height:25px;
+	width: 200px;
+	margin-left: 450px;	
+	margin-top: -25px;
+	background: #FFC0CB;
+	text-align: center;
+	position: relative;
+}
+
+.itemCinza{
+
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 14px;
+	height:25px;
+	width: 700px;	
+	background: #DCDCDC;
+	margin: 10px;
+	position: relative;
+}
+
+
+.itemBraco{
+
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 14px;
+	height:25px;
+	width: 700px;	
+	background: #FFF8DC;
+	margin: 10px;
+	position: relative;
+
+}
+
+.divSuperior{
+
+	margin: 110px;	
+
+	
+}
+
+.jogadoresGolsA{
+	position: relative;	
+   	width: 150px;
+	text-align: center;
+	margin-left: 80px;
+	margin-top:  10px;	
+
+}
+
+.jogadoresGolsB{
+	
+	position: relative;
+  	width: 150px;
+	text-align: center;
+	margin-left: 480px;	
+		
+	
+}
+
+.internaJogadorA{
+
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 10px;
+    text-align: center;
+	height:15px;
+	width: 150px;	
+	margin-top: 20px;
+	position: relative;
+	background: #DCDCDC;	
+}
+
+.internaJogadorB{
+
+	-moz-border-radius: 10px;
+    border-radius: 10px;
+    -Webkit-border-radius: 10px;
+    font-weight:bold;
+    font-style:italic;	
+    font-size: 10px;
+    text-align: center;
+	height:15px;
+	width: 150px;
+	margin-top: 20px;
+	position: relative;	
+	background: #DCDCDC;
+	
+}
+
+
+
+.divCamposTimeA {
+
+	font-style:italic;
+	font-weight:bold;
+	font-size: 14px;
+	height:18px;
+	width: 50px;	
+	/*background: #8B0000;*/
+	margin-left: 35px;
+	margin-top: 15px;
+	text-align: center;
+
+}
+
+.divCamposTimeB {
+
+	font-style:italic;
+	font-weight:bold;
+	font-size: 14px;
+	height:18px;
+	width: 50px;	
+	/*background: #8B0000;*/
+	margin-left: 610px;
+	margin-top: -15px;
+	text-align: center;
+}
+
+.divDescricao{
+
+ margin-left: 280px;
+ margin-top: -15px;
+ height:18px;
+ width: 180px;
+ text-align: center;
+
+
+}
+
+.itemFont{
+
+	font-size: 16px;
+}
+/* --- Media --- */
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}
+
+@media screen and (max-device-width: 480px) {
+  
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+	
+
+</style>			
+
+
+
+
+
+
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+<script type="text/javascript"  charset="utf-8"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/styleTable.css">
+<title>TCC Ontologia Aplicada ao Futebol</title>
+
+<link href="css/jquery-ui-1.10.2.custom.css" rel="stylesheet">
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.2.custom.js"></script>
+
+<link rel="stylesheet" href="css/base/jquery.ui.all.css">
+<script src="js/ui/jquery.ui.core.js"></script>
+<script src="js/ui/jquery.ui.widget.js"></script>
+<script src="js/ui/jquery.ui.accordion.js"></script>
+<link rel="stylesheet" href="css/base/demos.css">
+
+<script src="js/autoComplet.js"></script>
+<script src="js/loodSelectTimes.js"></script>
+<script src="js/descLance.js"></script>
+<script src="js/tempoJogo.js"></script>
+<script src="js/toolTipe.js"></script>
+<script src="js/gerarResultados.js"></script>
+<script src="js/removerHistorico.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/smoothness/msdropdown/dd.css" />
+<script src="js/msdropdown/jquery.dd.js"></script>
+<link rel="stylesheet" type="text/css" href="css/smoothness/msdropdown/skin2.css" />
+<link rel="stylesheet" type="text/css" href="css/styleTooltipe.css" />
+<link rel="stylesheet" type="text/css" href="css/smoothness/msdropdown/flags.css" />
+
+<script src="js/tween.min.js"></script>
+<script src="js/RequestAnimationFrame.js"></script>
+
+<script type="text/javascript" src="js/jquery.multipleselectbox-src.js"></script>
+<link type="text/css" rel="stylesheet" href="multipleselectbox.css" />
+
+<body onload="adicionarLinha(),removerHistórico(), onloadAcoes()">
+
+<div id="wrapper">
+
+	<!-- Container de cima pega -->
+	<header>
+		<h1>Lance-Lance Futebol</h1>
+		<a id="voltar" href="http://globo.com">voltar ao tutorial</a>
+	</header>
+
+	<section id="demo">
+
+		<section id="introductionTop">
+
+			<!-- Selecionar Times -->
+			<td valign="top">
+				<div id="byjson"  ></div>
+			</td>
+
+		</section>
+
+		<section id="introductionRight" >
+
+			<div id="myDiv0"></div>
+
+		</section>
+
+		<section id="introductionLeft">
+
+			<div id="myDiv1"></div>
+
+		</section>
+
+		<section align="center" id="taticaTimeRiht">
+
+			<form> <b>TATICAS</b>
+				&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="343"  id="red">
+				3-4-3 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="361" id="blue">
+				3-6-1 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="424" id="blue">
+				4-2-4 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="433" id="blue">
+				4-3-3 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="451" id="blue">
+				4-5-1 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeA(this.value)" value="532" id="blue">5-3-2 &nbsp;&nbsp;&nbsp;</form>
+
+		</section>
+
+		<section align="center" id="taticaTimeLeft">
+
+			<form> <b>TATICAS</b>
+				&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="343"  id="red">
+				3-4-3 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="361" id="blue">
+				3-6-1 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="424" id="blue">
+				4-2-4 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="433" id="blue">
+				4-3-3 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="451" id="blue">
+				4-5-1 &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="colors" onClick="taticaTimeB(this.value)" value="532" id="blue">5-3-2 &nbsp;&nbsp;&nbsp;</form>
+
+		</section>
+
+	</section>
+
+	<section id="descricao">
+
+		<div id="relatos">
+			<br>
+			<br>
+			<h3>Relato dos Lances</h3>
+			<!-- Auto completar de Açoes -->
+
+			<!--<input placeholder="Tempo" size=02 maxlength= 2 title="Campo tempo de jogo formatado no modelo europeu 1-90" style="text-align: center;" id="tempo">
+			-->
+			<input disabled type="text" id="tempo" size="1" style="text-align: center;" value="00">
+			:
+			<input disabled type="text" id="seg"  size="1" style="text-align: center;" value="00">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" id="cronometro" value="INICIAR" onclick="tempoJogo();">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" id="resetCronometro" value="RESETAR" onclick="resetTempo();">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- ============================================================================================================== -->
+			<!-- Advance Demo: DropDown -->
+			<!-- ============================================================================================================== -->
+			<br>
+			<br>
+			<br>
+			<input placeholder="Açoes" title="Padroes de lances que ocorrem durante uma partida de futebol"  type="text" id="controlDropDown"  size=50 maxlength=100 />
+			<br>
+			<ul id="MultipleSelectBox_DropDown"
+				style="position: absolute; background-color: white; display: none;"></ul>
+			<!-- <input  placeholder="Açoes" type="search"  title="Padroes de lances que ocorrem durante uma partida de futebol" size=50 maxlength=100 id="auto" >
+			-->
+			<br>
+			<br>
+			<br>
+			<br>
+			<input  placeholder="Região" type="search" title="Região do campo onde ocorreu o lance" size=50 maxlength=100 id="regiao" >
+			<br>
+			<input type="radio" name="regiao" value="" id="campo1">
+			Ataque &nbsp;&nbsp;&nbsp;
+			<input type="radio" name="regiao" value="" id="campo2">
+			Defesa
+			<br>
+			<br>
+			<br>
+			<br>
+			<select id="myTimes" onchange="selectJogadores(this.value)">
+
+				<option value="">TIMES</option>
+
+			</select>
+			<br>
+			<br>
+			<br>
+			<br>
+			<select id="mySelect">
+
+				<option value="">JOGADORES</option>
+
+			</select>
+
+			<br>
+			<input type="button" value="&lt;- Adicionar Lance -&gt;" style="height:30px; margin-left:300px" onclick="adicionarLinha()" />
+
+		</div>
+
+		<div id="divScroll">
+
+			<table id="tabela">
+				<tbody>
+					<tr>
+						<td align="center">Tempo</td>
+						<td align="center">Time</td>
+						<td align="center">Jogador</td>
+						<td align="center">Lance</td>
+						<td align="center">Região</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	</section>
+
+	<div class="separador">
+
+		<div id="accordion">
+			<p>Resumo da Partida</p>
+			<div>
+				<div ><input type="button" value="&lt;- Gerar Resumo -&gt;" style="height:30px; margin-left:450px" onclick="geraResumo()" /></div><p>
+
+				<div id="Titulo" class="texto">  TITULO!!! 
+				</div>
+				<div id="Resumo"  class="texto"><p>
+					RESUMO!!!
+
+				
+				</div>
+			</div>
+			<p>Estátisca do Jogo</p>
+			<div>
+
+
+				<div id="estatisticaJogo" class="estatistica">
+
+					<div id="timea" class="timesA"> </div>
+					<div id="timeb" class="timesB"> </div>
+
+					<div class="itemCinza"><div id="goltimeA" class="divCamposTimeA"></div> <div class="divDescricao">GOL</div> <div id="goltimeB" class="divCamposTimeB"></div></div>
+ 					<div id="jogadorA" class="jogadoresGolsA"></div><div id="jogadorB" class="jogadoresGolsB"></div> 
+					<div class="itemBraco"><div id="golPenaltiA" class="divCamposTimeA"></div> <div class="divDescricao">GOL/PENALTI</div> <div id="golPenaltiB" class="divCamposTimeB"></div></div>
+					<div class="itemCinza"><div id="golFaltaA" class="divCamposTimeA"></div> <div class="divDescricao">GOL/FALTA</div> <div id="golFaltaB" class="divCamposTimeB"></div></div>
+					<div class="itemBraco"><div id="ChuteGolA" class="divCamposTimeA"></div> <div class="divDescricao">CHUTES A GOL</div> <div id="ChuteGolB" class="divCamposTimeB"></div></div>
+					<div class="itemCinza"><div id="faltasA" class="divCamposTimeA"></div> <div class="divDescricao">FALTAS</div> <div id="faltasB" class="divCamposTimeB"></div></div>
+					<div class="itemBraco"><div id="impedimentosA" class="divCamposTimeA"></div> <div class="divDescricao">IMPEDIMENTO</div> <div id="impedimentosB" class="divCamposTimeB"></div></div>
+					<div class="itemCinza"><div id="bolasRoubadasA" class="divCamposTimeA"></div> <div class="divDescricao">BOLAS ROUBADAS</div> <div id="bolasRoubadasB" class="divCamposTimeB"></div></div>
+					<div class="itemBraco"><div id="passesErradosA" class="divCamposTimeA"></div> <div class="divDescricao">PASSES ERRADOS</div> <div id="passesErradosB" class="divCamposTimeB"></div></div>
+					<div class="itemCinza"><div id="cartaoAA" class="divCamposTimeA"></div> <div class="divDescricao">CARTÃO AMARELO</div> <div id="cartaoAB" class="divCamposTimeB"></div></div>
+					<div id="cartaoAmaTimeA" class="jogadoresGolsA"></div><div id="cartaoAmaTimeB" class="jogadoresGolsB"></div> 
+					<div class="itemBraco"><div id="cartaoVA" class="divCamposTimeA"></div> <div class="divDescricao">CARTÃO VERMELHO</div> <div id="cartaoVB" class="divCamposTimeB"></div></div>
+					
+					<!-- <div class="itemCinza"><div id="golJogadorA" class="divCamposTimeA"></div> <div class="divDescricao">GOL/JOGADOR</div> <div id="golJogadorB" class="divCamposTimeB"></div></div><p> -->
+					<div id="cartaoVerTimeA" class="jogadoresGolsA"></div><div id="cartaoVerTimeB" class="jogadoresGolsB"></div>
+
+				</div>
+			</div>
+			<p>Gráfico da Partida</p>
+			<div>
+				<div align="center" id="infra"></div>
+			</div>
+
+		</div>
+
+		<footer>
+
+			<p class="autor">
+				Desenvolvido por
+				<a href="http://globo.com">Erivan Franklin</a>
+				<a href="erivanfrank@hotmail.com"></a>
+			</p>
+			<p class="referencia">
+				Inspirado por
+				<a href="http://www.usc.br">Dr. Patrick Pedreira</a>
+			</p>
+
+		</footer>
+
+	</div>
+
+</body>
+</html>
